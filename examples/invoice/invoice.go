@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/goldencloud-sdk-go/examples/invoice/model"
-	"github.com/goldencloud-sdk-go/goldencloud/common"
-	"github.com/goldencloud-sdk-go/goldencloud/invoice"
+	"github.com/gaodengyun/goldencloud-sdk-go/examples/invoice/model"
+	"github.com/gaodengyun/goldencloud-sdk-go/goldencloud/common"
+	"github.com/gaodengyun/goldencloud-sdk-go/goldencloud/invoice"
 )
 
 func main() {

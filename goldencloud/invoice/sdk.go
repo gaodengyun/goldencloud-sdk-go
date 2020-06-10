@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/goldencloud-sdk-go/goldencloud/common"
+	"github.com/gaodengyun/goldencloud-sdk-go/goldencloud/common"
 )
 
 func NewSdk(algorithm, appkey, appsecret, privateKey, env string) *sdk {
