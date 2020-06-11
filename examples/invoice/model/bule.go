@@ -30,10 +30,10 @@ func Blue() (routerAddress string, postData map[string]interface{}) {
 		"user_openid":          "ba9ea0bdfa1f460993c990564caab18f",
 		"special_invoice_kind": "",
 		"zsfs":                 "",
-		"deduction":            0,
-		"amount_has_tax":       998000,
-		"tax_amount":           9980,
-		"amount_without_tax":   8644,
+		"deduction":            "",
+		"amount_has_tax":       "66.66",
+		"tax_amount":           "66.66",
+		"amount_without_tax":   "66.66",
 		"remark":               "readme",
 	}
 
@@ -44,12 +44,12 @@ func Blue() (routerAddress string, postData map[string]interface{}) {
 	item["tax_code"] = "your tax_code"
 	item["models"] = "zyx"
 	item["unit"] = "个"
-	item["total_price"] = 8846
+	item["total_price"] = "66.66"
 	item["total"] = "5"
 	item["price"] = "17.22"
-	item["tax_rate"] = 100
-	item["tax_amount"] = 846
-	item["discount"] = 0
+	item["tax_rate"] = "66.66"
+	item["tax_amount"] = "66.66"
+	item["discount"] = "66.66"
 	item["preferential_policy_flag"] = "0"
 	item["zero_tax_flag"] = "0"
 	item["vat_special_management"] = ""
