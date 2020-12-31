@@ -53,13 +53,13 @@ func (this *sdk) HttpPost(baseUrl string, routerAddress string, post map[string]
 	}
 
 	reqest.Header.Add("Authorization", auth)
+	reqest.Header.Add("Content-Type", "application/json")
 
 	r, err := client.Do(reqest)
-	defer r.Body.Close()
-
 	if err != nil {
 		return nil, err
 	}
+	defer r.Body.Close()
 
 	return ioutil.ReadAll(r.Body)
 }
