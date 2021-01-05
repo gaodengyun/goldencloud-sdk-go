@@ -12,8 +12,8 @@ import (
 	"github.com/gaodengyun/goldencloud-sdk-go/goldencloud/common"
 )
 
-func NewSdk(algorithm, appkey, appsecret, privateKey, env string) *sdk {
-	return &sdk{
+func NewSdk(algorithm, appkey, appsecret, privateKey, env string) *Client {
+	return &Client{
 		env:        env,
 		appkey:     appkey,
 		appsecret:  appsecret,
@@ -22,7 +22,7 @@ func NewSdk(algorithm, appkey, appsecret, privateKey, env string) *sdk {
 	}
 }
 
-type sdk struct {
+type Client struct {
 	env        string
 	appkey     string
 	appsecret  string
@@ -30,7 +30,7 @@ type sdk struct {
 	algorithm  string
 }
 
-func (this *sdk) HttpPost(baseUrl string, routerAddress string, post map[string]interface{}) ([]byte, error) {
+func (this *Client) HttpPost(baseUrl string, routerAddress string, post map[string]interface{}) ([]byte, error) {
 
 	// 获取转换后的post字符串
 	postData, err := common.GetPostDataWithMap(post)
@@ -65,7 +65,7 @@ func (this *sdk) HttpPost(baseUrl string, routerAddress string, post map[string]
 }
 
 // getAuth 获取授权字符串
-func (this *sdk) getAuth(routerAddress string, postData string, timestamp string, nonce string) (string, error) {
+func (this *Client) getAuth(routerAddress string, postData string, timestamp string, nonce string) (string, error) {
 
 	originStr := "algorithm=" + this.algorithm + "|appkey=" + this.appkey + "|nonce=" + nonce + "|timestamp=" + timestamp + "|" + routerAddress + "|" + postData
 
